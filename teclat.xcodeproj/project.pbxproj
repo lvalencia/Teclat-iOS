@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E000B2425E389B5002DD341 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E000B2325E389B4002DD341 /* UIKit.framework */; };
 		7E0665E225E23E2700A10151 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0665E125E23E2700A10151 /* AppDelegate.m */; };
 		7E0665E525E23E2700A10151 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0665E425E23E2700A10151 /* SceneDelegate.m */; };
 		7E0665E825E23E2700A10151 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0665E725E23E2700A10151 /* ViewController.m */; };
@@ -16,8 +17,12 @@
 		7E0665F325E23E2800A10151 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0665F225E23E2800A10151 /* main.m */; };
 		7E0665FD25E23E2900A10151 /* teclatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0665FC25E23E2900A10151 /* teclatTests.m */; };
 		7E06660825E23E2900A10151 /* teclatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E06660725E23E2900A10151 /* teclatUITests.m */; };
-		7E06662025E23E4000A10151 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E06661F25E23E4000A10151 /* KeyboardViewController.m */; };
+		7E06662025E23E4000A10151 /* KeyboardViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E06661F25E23E4000A10151 /* KeyboardViewController.mm */; };
 		7E06662425E23E4000A10151 /* RadialXKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E06661C25E23E4000A10151 /* RadialXKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E0BD78625E39123002F75B5 /* libbgfxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77725E3910C002F75B5 /* libbgfxDebug.a */; };
+		7E0BD78725E39123002F75B5 /* libbimgDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76425E3910B002F75B5 /* libbimgDebug.a */; };
+		7E0BD78825E39123002F75B5 /* libbimg_decodeDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76A25E3910B002F75B5 /* libbimg_decodeDebug.a */; };
+		7E0BD78925E39123002F75B5 /* libbxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77025E3910C002F75B5 /* libbxDebug.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,69 @@
 			remoteGlobalIDString = 7E06661B25E23E4000A10151;
 			remoteInfo = RadialXKeyboard;
 		};
+		7E0BD76325E3910B002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD75F25E3910B002F75B5 /* bimg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5ACAB1E8C601FA7FCF0B5EA3;
+			remoteInfo = bimg;
+		};
+		7E0BD76925E3910B002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD76525E3910B002F75B5 /* bimg_decode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D6367F06989315752CFB622;
+			remoteInfo = bimg_decode;
+		};
+		7E0BD76F25E3910C002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD76B25E3910B002F75B5 /* bx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D5D335834140F17D0A3489DB;
+			remoteInfo = bx;
+		};
+		7E0BD77625E3910C002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD77125E3910C002F75B5 /* bgfx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 02DC17D86E13606F771DC492;
+			remoteInfo = bgfx;
+		};
+		7E0BD77C25E3911A002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD77125E3910C002F75B5 /* bgfx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A853C66B944DEFBD7DBA85CE;
+			remoteInfo = bgfx;
+		};
+		7E0BD77E25E3911A002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD76B25E3910B002F75B5 /* bx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B1D4BC607ACD48FB0CAE88A;
+			remoteInfo = bx;
+		};
+		7E0BD78025E3911A002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD76525E3910B002F75B5 /* bimg_decode.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C35735362F701C60F81CACF9;
+			remoteInfo = bimg_decode;
+		};
+		7E0BD78225E3911A002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD75F25E3910B002F75B5 /* bimg.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 00D72F0FECD05861D53DEF71;
+			remoteInfo = bimg;
+		};
+		7E0BD78425E3911A002F75B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E0BD76B25E3910B002F75B5 /* bx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B1D4BC607ACD48FB0CAE88A;
+			remoteInfo = bx;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +127,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E000B2325E389B4002DD341 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7E0665DD25E23E2700A10151 /* teclat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teclat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0665E025E23E2700A10151 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E0665E125E23E2700A10151 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,8 +148,12 @@
 		7E06660925E23E2900A10151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E06661C25E23E4000A10151 /* RadialXKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RadialXKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E06661E25E23E4000A10151 /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
-		7E06661F25E23E4000A10151 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		7E06661F25E23E4000A10151 /* KeyboardViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KeyboardViewController.mm; sourceTree = "<group>"; };
 		7E06662125E23E4000A10151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E0BD75F25E3910B002F75B5 /* bimg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bimg.xcodeproj; path = "../../libs/bgfx/.build/projects/xcode11-ios/bimg.xcodeproj"; sourceTree = "<group>"; };
+		7E0BD76525E3910B002F75B5 /* bimg_decode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bimg_decode.xcodeproj; path = "../../libs/bgfx/.build/projects/xcode11-ios/bimg_decode.xcodeproj"; sourceTree = "<group>"; };
+		7E0BD76B25E3910B002F75B5 /* bx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bx.xcodeproj; path = "../../libs/bgfx/.build/projects/xcode11-ios/bx.xcodeproj"; sourceTree = "<group>"; };
+		7E0BD77125E3910C002F75B5 /* bgfx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bgfx.xcodeproj; path = "../../libs/bgfx/.build/projects/xcode11-ios/bgfx.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +182,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0BD78625E39123002F75B5 /* libbgfxDebug.a in Frameworks */,
+				7E0BD78725E39123002F75B5 /* libbimgDebug.a in Frameworks */,
+				7E0BD78825E39123002F75B5 /* libbimg_decodeDebug.a in Frameworks */,
+				7E0BD78925E39123002F75B5 /* libbxDebug.a in Frameworks */,
+				7E000B2425E389B5002DD341 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E000B2225E389B4002DD341 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E000B2325E389B4002DD341 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7E0665D425E23E2700A10151 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +209,8 @@
 				7E06660625E23E2900A10151 /* teclatUITests */,
 				7E06661D25E23E4000A10151 /* RadialXKeyboard */,
 				7E0665DE25E23E2700A10151 /* Products */,
+				7E0BD75E25E390B3002F75B5 /* Projects */,
+				7E000B2225E389B4002DD341 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,10 +265,53 @@
 			isa = PBXGroup;
 			children = (
 				7E06661E25E23E4000A10151 /* KeyboardViewController.h */,
-				7E06661F25E23E4000A10151 /* KeyboardViewController.m */,
+				7E06661F25E23E4000A10151 /* KeyboardViewController.mm */,
 				7E06662125E23E4000A10151 /* Info.plist */,
 			);
 			path = RadialXKeyboard;
+			sourceTree = "<group>";
+		};
+		7E0BD75E25E390B3002F75B5 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BD77125E3910C002F75B5 /* bgfx.xcodeproj */,
+				7E0BD76525E3910B002F75B5 /* bimg_decode.xcodeproj */,
+				7E0BD75F25E3910B002F75B5 /* bimg.xcodeproj */,
+				7E0BD76B25E3910B002F75B5 /* bx.xcodeproj */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		7E0BD76025E3910B002F75B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BD76425E3910B002F75B5 /* libbimgDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E0BD76625E3910B002F75B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BD76A25E3910B002F75B5 /* libbimg_decodeDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E0BD76C25E3910B002F75B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BD77025E3910C002F75B5 /* libbxDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E0BD77225E3910C002F75B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BD77725E3910C002F75B5 /* libbgfxDebug.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +383,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				7E0BD77D25E3911A002F75B5 /* PBXTargetDependency */,
+				7E0BD77F25E3911A002F75B5 /* PBXTargetDependency */,
+				7E0BD78125E3911A002F75B5 /* PBXTargetDependency */,
+				7E0BD78325E3911A002F75B5 /* PBXTargetDependency */,
+				7E0BD78525E3911A002F75B5 /* PBXTargetDependency */,
 			);
 			name = RadialXKeyboard;
 			productName = RadialXKeyboard;
@@ -293,6 +429,24 @@
 			mainGroup = 7E0665D425E23E2700A10151;
 			productRefGroup = 7E0665DE25E23E2700A10151 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7E0BD77225E3910C002F75B5 /* Products */;
+					ProjectRef = 7E0BD77125E3910C002F75B5 /* bgfx.xcodeproj */;
+				},
+				{
+					ProductGroup = 7E0BD76025E3910B002F75B5 /* Products */;
+					ProjectRef = 7E0BD75F25E3910B002F75B5 /* bimg.xcodeproj */;
+				},
+				{
+					ProductGroup = 7E0BD76625E3910B002F75B5 /* Products */;
+					ProjectRef = 7E0BD76525E3910B002F75B5 /* bimg_decode.xcodeproj */;
+				},
+				{
+					ProductGroup = 7E0BD76C25E3910B002F75B5 /* Products */;
+					ProjectRef = 7E0BD76B25E3910B002F75B5 /* bx.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7E0665DC25E23E2700A10151 /* teclat */,
@@ -302,6 +456,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7E0BD76425E3910B002F75B5 /* libbimgDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbimgDebug.a;
+			remoteRef = 7E0BD76325E3910B002F75B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7E0BD76A25E3910B002F75B5 /* libbimg_decodeDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbimg_decodeDebug.a;
+			remoteRef = 7E0BD76925E3910B002F75B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7E0BD77025E3910C002F75B5 /* libbxDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbxDebug.a;
+			remoteRef = 7E0BD76F25E3910C002F75B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7E0BD77725E3910C002F75B5 /* libbgfxDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbgfxDebug.a;
+			remoteRef = 7E0BD77625E3910C002F75B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7E0665DB25E23E2700A10151 /* Resources */ = {
@@ -369,7 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E06662025E23E4000A10151 /* KeyboardViewController.m in Sources */,
+				7E06662025E23E4000A10151 /* KeyboardViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +575,31 @@
 			isa = PBXTargetDependency;
 			target = 7E06661B25E23E4000A10151 /* RadialXKeyboard */;
 			targetProxy = 7E06662225E23E4000A10151 /* PBXContainerItemProxy */;
+		};
+		7E0BD77D25E3911A002F75B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = bgfx;
+			targetProxy = 7E0BD77C25E3911A002F75B5 /* PBXContainerItemProxy */;
+		};
+		7E0BD77F25E3911A002F75B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = bx;
+			targetProxy = 7E0BD77E25E3911A002F75B5 /* PBXContainerItemProxy */;
+		};
+		7E0BD78125E3911A002F75B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = bimg_decode;
+			targetProxy = 7E0BD78025E3911A002F75B5 /* PBXContainerItemProxy */;
+		};
+		7E0BD78325E3911A002F75B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = bimg;
+			targetProxy = 7E0BD78225E3911A002F75B5 /* PBXContainerItemProxy */;
+		};
+		7E0BD78525E3911A002F75B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = bx;
+			targetProxy = 7E0BD78425E3911A002F75B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -464,6 +674,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../libs/bx/include/compat/ios/,
+					../libs/bx/include/,
+					../libs/bimg/include/,
+					../libs/bgfx/include/,
+					../libs/bgfx/3rdparty/,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -517,6 +734,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../libs/bx/include/compat/ios/,
+					../libs/bx/include/,
+					../libs/bimg/include/,
+					../libs/bgfx/include/,
+					../libs/bgfx/3rdparty/,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -528,10 +752,11 @@
 		7E06660D25E23E2900A10151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5Z9WMAKSVE;
+				DEVELOPMENT_TEAM = 4BS65FY9RR;
 				INFOPLIST_FILE = teclat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,10 +771,11 @@
 		7E06660E25E23E2900A10151 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5Z9WMAKSVE;
+				DEVELOPMENT_TEAM = 4BS65FY9RR;
 				INFOPLIST_FILE = teclat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -641,7 +867,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5Z9WMAKSVE;
+				DEVELOPMENT_TEAM = 4BS65FY9RR;
 				INFOPLIST_FILE = RadialXKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -659,7 +885,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5Z9WMAKSVE;
+				DEVELOPMENT_TEAM = 4BS65FY9RR;
 				INFOPLIST_FILE = RadialXKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

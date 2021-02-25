@@ -19,10 +19,14 @@
 		7E06660825E23E2900A10151 /* teclatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E06660725E23E2900A10151 /* teclatUITests.m */; };
 		7E06662025E23E4000A10151 /* KeyboardViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E06661F25E23E4000A10151 /* KeyboardViewController.mm */; };
 		7E06662425E23E4000A10151 /* RadialXKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E06661C25E23E4000A10151 /* RadialXKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7E0BD78625E39123002F75B5 /* libbgfxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77725E3910C002F75B5 /* libbgfxDebug.a */; };
-		7E0BD78725E39123002F75B5 /* libbimgDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76425E3910B002F75B5 /* libbimgDebug.a */; };
-		7E0BD78825E39123002F75B5 /* libbimg_decodeDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76A25E3910B002F75B5 /* libbimg_decodeDebug.a */; };
-		7E0BD78925E39123002F75B5 /* libbxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77025E3910C002F75B5 /* libbxDebug.a */; };
+		7E0BD7C625E768FA002F75B5 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD7C525E768FA002F75B5 /* Metal.framework */; };
+		7E0BD7CC25E76940002F75B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD7CB25E76940002F75B5 /* QuartzCore.framework */; };
+		7E0BD81D25E770E6002F75B5 /* BGFXView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BD81C25E770E6002F75B5 /* BGFXView.mm */; };
+		7E0BD85D25E77C66002F75B5 /* libbgfxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77725E3910C002F75B5 /* libbgfxDebug.a */; };
+		7E0BD85E25E77C66002F75B5 /* libbimgDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76425E3910B002F75B5 /* libbimgDebug.a */; };
+		7E0BD85F25E77C66002F75B5 /* libbimg_decodeDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76A25E3910B002F75B5 /* libbimg_decodeDebug.a */; };
+		7E0BD86025E77C66002F75B5 /* libbxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77025E3910C002F75B5 /* libbxDebug.a */; };
+		7E0BD86E25E77CE4002F75B5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD86D25E77CE4002F75B5 /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +158,11 @@
 		7E0BD76525E3910B002F75B5 /* bimg_decode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bimg_decode.xcodeproj; path = "../../libs/bgfx/.build/projects/xcode11-ios/bimg_decode.xcodeproj"; sourceTree = "<group>"; };
 		7E0BD76B25E3910B002F75B5 /* bx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bx.xcodeproj; path = "../../libs/bgfx/.build/projects/xcode11-ios/bx.xcodeproj"; sourceTree = "<group>"; };
 		7E0BD77125E3910C002F75B5 /* bgfx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bgfx.xcodeproj; path = "../../libs/bgfx/.build/projects/xcode11-ios/bgfx.xcodeproj"; sourceTree = "<group>"; };
+		7E0BD7C525E768FA002F75B5 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		7E0BD7CB25E76940002F75B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7E0BD81B25E770E6002F75B5 /* BGFXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGFXView.h; sourceTree = "<group>"; };
+		7E0BD81C25E770E6002F75B5 /* BGFXView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BGFXView.mm; sourceTree = "<group>"; };
+		7E0BD86D25E77CE4002F75B5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,10 +191,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E0BD78625E39123002F75B5 /* libbgfxDebug.a in Frameworks */,
-				7E0BD78725E39123002F75B5 /* libbimgDebug.a in Frameworks */,
-				7E0BD78825E39123002F75B5 /* libbimg_decodeDebug.a in Frameworks */,
-				7E0BD78925E39123002F75B5 /* libbxDebug.a in Frameworks */,
+				7E0BD86E25E77CE4002F75B5 /* OpenGLES.framework in Frameworks */,
+				7E0BD85D25E77C66002F75B5 /* libbgfxDebug.a in Frameworks */,
+				7E0BD85E25E77C66002F75B5 /* libbimgDebug.a in Frameworks */,
+				7E0BD85F25E77C66002F75B5 /* libbimg_decodeDebug.a in Frameworks */,
+				7E0BD86025E77C66002F75B5 /* libbxDebug.a in Frameworks */,
+				7E0BD7CC25E76940002F75B5 /* QuartzCore.framework in Frameworks */,
+				7E0BD7C625E768FA002F75B5 /* Metal.framework in Frameworks */,
 				7E000B2425E389B5002DD341 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +208,9 @@
 		7E000B2225E389B4002DD341 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E0BD86D25E77CE4002F75B5 /* OpenGLES.framework */,
+				7E0BD7CB25E76940002F75B5 /* QuartzCore.framework */,
+				7E0BD7C525E768FA002F75B5 /* Metal.framework */,
 				7E000B2325E389B4002DD341 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -267,6 +282,8 @@
 				7E06661E25E23E4000A10151 /* KeyboardViewController.h */,
 				7E06661F25E23E4000A10151 /* KeyboardViewController.mm */,
 				7E06662125E23E4000A10151 /* Info.plist */,
+				7E0BD81B25E770E6002F75B5 /* BGFXView.h */,
+				7E0BD81C25E770E6002F75B5 /* BGFXView.mm */,
 			);
 			path = RadialXKeyboard;
 			sourceTree = "<group>";
@@ -555,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E06662025E23E4000A10151 /* KeyboardViewController.mm in Sources */,
+				7E0BD81D25E770E6002F75B5 /* BGFXView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,7 +650,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -698,7 +716,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;

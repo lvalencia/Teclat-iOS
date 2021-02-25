@@ -6,6 +6,7 @@
 //
 
 #import "KeyboardViewController.h"
+#import "BGFXView.h"
 
 @interface KeyboardViewController ()
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
@@ -17,6 +18,18 @@
     [super updateViewConstraints];
     
     // Add custom view sizing constraints here
+}
+
+- (void) loadView {
+    CGRect rect = [[UIScreen mainScreen] bounds]; // Pretty sure this needs to be smaller -- get screens attach debugger and see which one is the one we need
+    float scaleFactor = [[UIScreen mainScreen] scale];
+    
+    self.view = [[BGFXView alloc] initWithFrame:rect];
+    [self.view setContentScaleFactor: scaleFactor];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    // @TODO - Do some custom rendering
 }
 
 - (void)viewDidLoad {

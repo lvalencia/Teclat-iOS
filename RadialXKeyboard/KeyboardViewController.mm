@@ -29,7 +29,11 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    // @TODO - Do some custom rendering
+    [self.view start];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self.view stop];
 }
 
 - (void)viewDidLoad {

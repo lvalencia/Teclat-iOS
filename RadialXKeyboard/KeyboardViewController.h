@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KeyboardViewController : UIInputViewController
+@interface KeyboardViewController : UIInputViewController {
+}
 
 @end

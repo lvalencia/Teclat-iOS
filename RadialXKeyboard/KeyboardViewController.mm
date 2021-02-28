@@ -9,64 +9,61 @@
 #import "BGFXView.h"
 
 @interface KeyboardViewController ()
-@property (nonatomic, strong) UIButton *nextKeyboardButton;
+@property(nonatomic, strong) UIButton *nextKeyboardButton;
+@property(nonatomic, strong) BGFXView *keyboardView;
 @end
 
 @implementation KeyboardViewController
 
 - (void)updateViewConstraints {
     [super updateViewConstraints];
-    
+
     // Add custom view sizing constraints here
 }
 
-- (void) loadView {
-    CGRect rect = [[UIScreen mainScreen] bounds]; // Pretty sure this needs to be smaller -- get screens attach debugger and see which one is the one we need
-    float scaleFactor = [[UIScreen mainScreen] scale];
-    
-    self.view = [[BGFXView alloc] initWithFrame:rect];
-    [self.view setContentScaleFactor: scaleFactor];
-}
+- (void)viewWillAppear:(BOOL)animated {
+    // Visual Testing, root view is red
+    self.view.backgroundColor = [UIColor colorWithRed:1
+                                                green:0
+                                                 blue:0
+                                                alpha:1];
 
-- (void) viewWillAppear:(BOOL)animated {
-    [self.view start];
+    CGRect rect = [self.view frame];
+    self.keyboardView = [[BGFXView alloc] initWithFrame:rect];
+    float scaleFactor = [self.view contentScaleFactor];
+    [self.keyboardView setContentScaleFactor:scaleFactor];
+    [self.view addSubview:self.keyboardView];
+
+    // Visual Testing our BGFX View is Green
+    [self.keyboardView setBackgroundColor:[UIColor colorWithRed:0
+                                                          green:1
+                                                           blue:0
+                                                          alpha:1]];
+    [self.keyboardView start];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [self.view stop];
+    [((BGFXView *) self.view) stop];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Perform custom UI setup here
-    self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
-    [self.nextKeyboardButton sizeToFit];
-    self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.nextKeyboardButton addTarget:self action:@selector(handleInputModeListFromView:withEvent:) forControlEvents:UIControlEventAllTouchEvents];
-    
-    [self.view addSubview:self.nextKeyboardButton];
-    
-    [self.nextKeyboardButton.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
-    [self.nextKeyboardButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+
+
 }
 
-- (void)viewWillLayoutSubviews
-{
+- (void)viewWillLayoutSubviews {
     self.nextKeyboardButton.hidden = !self.needsInputModeSwitchKey;
     [super viewWillLayoutSubviews];
 }
 
-- (void)textWillChange:(id<UITextInput>)textInput {
+- (void)textWillChange:(id <UITextInput>)textInput {
     // The app is about to change the document's contents. Perform any preparation here.
 }
 
-- (void)textDidChange:(id<UITextInput>)textInput {
+- (void)textDidChange:(id <UITextInput>)textInput {
     // The app has just changed the document's contents, the document context has been updated.
-    
+
     UIColor *textColor = nil;
     if (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) {
         textColor = [UIColor whiteColor];

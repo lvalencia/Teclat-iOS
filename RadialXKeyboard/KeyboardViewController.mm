@@ -6,11 +6,11 @@
 //
 
 #import "KeyboardViewController.h"
-#import "BGFXView.h"
+#import "KeyboardView.h"
 
 @interface KeyboardViewController ()
 @property(nonatomic, strong) UIButton *nextKeyboardButton;
-@property(nonatomic, strong) BGFXView *keyboardView;
+@property(nonatomic, strong) KeyboardView *keyboardView;
 @end
 
 @implementation KeyboardViewController
@@ -29,7 +29,7 @@
                                                 alpha:1];
 
     CGRect rect = [self.view frame];
-    self.keyboardView = [[BGFXView alloc] initWithFrame:rect];
+    self.keyboardView = [[KeyboardView alloc] initWithFrame:rect];
     float scaleFactor = [self.view contentScaleFactor];
     [self.keyboardView setContentScaleFactor:scaleFactor];
     [self.view addSubview:self.keyboardView];
@@ -43,7 +43,7 @@
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [((BGFXView *) self.view) stop];
+    [((KeyboardView *) self.view) stop];
 }
 
 - (void)viewDidLoad {

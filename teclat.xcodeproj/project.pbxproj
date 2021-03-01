@@ -21,12 +21,13 @@
 		7E06662425E23E4000A10151 /* RadialXKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E06661C25E23E4000A10151 /* RadialXKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7E0BD7C625E768FA002F75B5 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD7C525E768FA002F75B5 /* Metal.framework */; };
 		7E0BD7CC25E76940002F75B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD7CB25E76940002F75B5 /* QuartzCore.framework */; };
-		7E0BD81D25E770E6002F75B5 /* BGFXView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BD81C25E770E6002F75B5 /* BGFXView.mm */; };
+		7E0BD81D25E770E6002F75B5 /* KeyboardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BD81C25E770E6002F75B5 /* KeyboardView.mm */; };
 		7E0BD85D25E77C66002F75B5 /* libbgfxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77725E3910C002F75B5 /* libbgfxDebug.a */; };
 		7E0BD85E25E77C66002F75B5 /* libbimgDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76425E3910B002F75B5 /* libbimgDebug.a */; };
 		7E0BD85F25E77C66002F75B5 /* libbimg_decodeDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76A25E3910B002F75B5 /* libbimg_decodeDebug.a */; };
 		7E0BD86025E77C66002F75B5 /* libbxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77025E3910C002F75B5 /* libbxDebug.a */; };
 		7E0BD86E25E77CE4002F75B5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD86D25E77CE4002F75B5 /* OpenGLES.framework */; };
+		C36A07A907DFF3B75A1B2EC7 /* KeyboardRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,9 +161,12 @@
 		7E0BD77125E3910C002F75B5 /* bgfx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bgfx.xcodeproj; path = "../../libs/bgfx/.build/projects/xcode11-ios/bgfx.xcodeproj"; sourceTree = "<group>"; };
 		7E0BD7C525E768FA002F75B5 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		7E0BD7CB25E76940002F75B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7E0BD81B25E770E6002F75B5 /* BGFXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGFXView.h; sourceTree = "<group>"; };
-		7E0BD81C25E770E6002F75B5 /* BGFXView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BGFXView.mm; sourceTree = "<group>"; };
+		7E0BD81B25E770E6002F75B5 /* KeyboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
+		7E0BD81C25E770E6002F75B5 /* KeyboardView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KeyboardView.mm; sourceTree = "<group>"; };
 		7E0BD86D25E77CE4002F75B5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C36A063DA13BED36AC927863 /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		C36A0745381BE7252D056A82 /* KeyboardRenderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KeyboardRenderer.hpp; sourceTree = "<group>"; };
+		C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardRenderer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,8 +286,11 @@
 				7E06661E25E23E4000A10151 /* KeyboardViewController.h */,
 				7E06661F25E23E4000A10151 /* KeyboardViewController.mm */,
 				7E06662125E23E4000A10151 /* Info.plist */,
-				7E0BD81B25E770E6002F75B5 /* BGFXView.h */,
-				7E0BD81C25E770E6002F75B5 /* BGFXView.mm */,
+				7E0BD81B25E770E6002F75B5 /* KeyboardView.h */,
+				7E0BD81C25E770E6002F75B5 /* KeyboardView.mm */,
+				C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */,
+				C36A0745381BE7252D056A82 /* KeyboardRenderer.hpp */,
+				C36A063DA13BED36AC927863 /* Renderer.hpp */,
 			);
 			path = RadialXKeyboard;
 			sourceTree = "<group>";
@@ -572,7 +579,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E06662025E23E4000A10151 /* KeyboardViewController.mm in Sources */,
-				7E0BD81D25E770E6002F75B5 /* BGFXView.mm in Sources */,
+				7E0BD81D25E770E6002F75B5 /* KeyboardView.mm in Sources */,
+				C36A07A907DFF3B75A1B2EC7 /* KeyboardRenderer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

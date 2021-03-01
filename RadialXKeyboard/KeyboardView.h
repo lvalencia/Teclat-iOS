@@ -1,15 +1,17 @@
 //
-//  BGFXView.h
+//  KeyboardView.h
 //  RadialXKeyboard
 //
 //  Created by LuisValencia on 2/24/21.
 //
 
 #import <UIKit/UIKit.h>
+#import "KeyboardRenderer.hpp"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BGFXView : UIView {
+@interface KeyboardView : UIView {
+    KeyboardRenderer* keyboardRenderer;
     CADisplayLink* displayLink;
 }
 - (void) start;

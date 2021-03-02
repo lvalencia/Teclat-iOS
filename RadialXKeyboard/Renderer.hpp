@@ -10,6 +10,7 @@
 struct RendererArgs {
     void *layer;
     void *device;
+    const char *resourcePath;
     uint32_t width;
     uint32_t height;
 };
@@ -42,6 +43,10 @@ public:
 
     uint32_t height() {
         return _args.height;
+    }
+
+    const char* resourcePath() {
+        return _args.resourcePath;
     }
 
     virtual ~Renderer() = default;

@@ -39,7 +39,10 @@ static id <MTLDevice> metalDevice = NULL;
         return nil;
     }
 
+    NSBundle *main = [NSBundle mainBundle];
+    NSString *resourcePath = [main resourcePath];
     RendererArgs rendererArgs;
+    rendererArgs.resourcePath = [resourcePath UTF8String];
     rendererArgs.layer = [self layer];
     rendererArgs.device = metalDevice;
     rendererArgs.width = static_cast<uint32_t>(rect.size.width);
@@ -54,9 +57,7 @@ static id <MTLDevice> metalDevice = NULL;
 - (void)renderFrame {
     // This renders in the view (if it's not rendering the whole view will be green)
     keyboardRenderer->update();
-
-    bgfx::frame();
-    bgfx::renderFrame();
+    // bgfx::renderFrame();
 }
 
 - (void)start {

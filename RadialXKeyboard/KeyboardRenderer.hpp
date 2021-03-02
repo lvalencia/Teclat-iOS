@@ -6,8 +6,13 @@
 #define TECLAT_KEYBOARDRENDERER_HPP
 
 #include "Renderer.hpp"
+#include <bgfx/embedded_shader.h>
 
 class KeyboardRenderer : public Renderer {
+private:
+    bgfx::VertexBufferHandle vertexBufferHandle;
+    bgfx::IndexBufferHandle indexBufferHandle;
+    bgfx::ProgramHandle program;
 public:
     KeyboardRenderer(const RendererArgs& args);
 

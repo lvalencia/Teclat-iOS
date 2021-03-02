@@ -27,6 +27,9 @@
 		7E0BD85F25E77C66002F75B5 /* libbimg_decodeDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD76A25E3910B002F75B5 /* libbimg_decodeDebug.a */; };
 		7E0BD86025E77C66002F75B5 /* libbxDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD77025E3910C002F75B5 /* libbxDebug.a */; };
 		7E0BD86E25E77CE4002F75B5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0BD86D25E77CE4002F75B5 /* OpenGLES.framework */; };
+		7E39758225ECA0910089AF21 /* fs_cubes.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7E396FA825ECA08D0089AF21 /* fs_cubes.bin */; };
+		7E39766F25ECA0920089AF21 /* vs_cubes.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7E39709525ECA08E0089AF21 /* vs_cubes.bin */; };
+		C36A041B9EEC45F9F5996868 /* ShaderLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36A0322E85DE553E2BFCBC4 /* ShaderLoader.cpp */; };
 		C36A07A907DFF3B75A1B2EC7 /* KeyboardRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */; };
 /* End PBXBuildFile section */
 
@@ -164,9 +167,13 @@
 		7E0BD81B25E770E6002F75B5 /* KeyboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
 		7E0BD81C25E770E6002F75B5 /* KeyboardView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KeyboardView.mm; sourceTree = "<group>"; };
 		7E0BD86D25E77CE4002F75B5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		7E396FA825ECA08D0089AF21 /* fs_cubes.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = fs_cubes.bin; sourceTree = "<group>"; };
+		7E39709525ECA08E0089AF21 /* vs_cubes.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = vs_cubes.bin; sourceTree = "<group>"; };
+		C36A0322E85DE553E2BFCBC4 /* ShaderLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderLoader.cpp; sourceTree = "<group>"; };
 		C36A063DA13BED36AC927863 /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
 		C36A0745381BE7252D056A82 /* KeyboardRenderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KeyboardRenderer.hpp; sourceTree = "<group>"; };
 		C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardRenderer.cpp; sourceTree = "<group>"; };
+		C36A0C84F159F7EC111C25EC /* ShaderLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShaderLoader.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +290,7 @@
 		7E06661D25E23E4000A10151 /* RadialXKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				7E396EB325ECA08C0089AF21 /* shaders */,
 				7E06661E25E23E4000A10151 /* KeyboardViewController.h */,
 				7E06661F25E23E4000A10151 /* KeyboardViewController.mm */,
 				7E06662125E23E4000A10151 /* Info.plist */,
@@ -291,6 +299,8 @@
 				C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */,
 				C36A0745381BE7252D056A82 /* KeyboardRenderer.hpp */,
 				C36A063DA13BED36AC927863 /* Renderer.hpp */,
+				C36A0322E85DE553E2BFCBC4 /* ShaderLoader.cpp */,
+				C36A0C84F159F7EC111C25EC /* ShaderLoader.hpp */,
 			);
 			path = RadialXKeyboard;
 			sourceTree = "<group>";
@@ -336,6 +346,23 @@
 				7E0BD77725E3910C002F75B5 /* libbgfxDebug.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7E396EB325ECA08C0089AF21 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				7E396F9325ECA08D0089AF21 /* metal */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		7E396F9325ECA08D0089AF21 /* metal */ = {
+			isa = PBXGroup;
+			children = (
+				7E396FA825ECA08D0089AF21 /* fs_cubes.bin */,
+				7E39709525ECA08E0089AF21 /* vs_cubes.bin */,
+			);
+			path = metal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,6 +568,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E39766F25ECA0920089AF21 /* vs_cubes.bin in Resources */,
+				7E39758225ECA0910089AF21 /* fs_cubes.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +610,7 @@
 				7E06662025E23E4000A10151 /* KeyboardViewController.mm in Sources */,
 				7E0BD81D25E770E6002F75B5 /* KeyboardView.mm in Sources */,
 				C36A07A907DFF3B75A1B2EC7 /* KeyboardRenderer.cpp in Sources */,
+				C36A041B9EEC45F9F5996868 /* ShaderLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

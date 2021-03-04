@@ -6,6 +6,7 @@
 #include <bgfx/bgfx.h>
 #include <bgfx/platform.h>
 #include <bx/math.h>
+#include <cstdio>
 #include "ShaderLoader.hpp"
 
 #pragma mark cube mesh
@@ -105,6 +106,8 @@ void KeyboardRenderer::init() {
 unsigned int counter = 0;
 
 void KeyboardRenderer::update() {
+    this->processEvents();
+
     uint32_t width = this->width();
     uint32_t height = this->height();
 
@@ -144,6 +147,23 @@ void KeyboardRenderer::update() {
     counter++;
 }
 
-void KeyboardRenderer::teardown() {
+void KeyboardRenderer::processEvents() {
+    if (this->queue()->isEmpty()) {
+        return;
+    }
+    CGPoint touchEvent = this->queue()->dequeue();
 
+    // @TODO - RayCasting to detect if something was touched
+
+    // @TODO - Forward RayCasting (was something touched, if so what) result to
+    //         iOS land textDocumentProxy(Handler? or some sort of Handler and write to doc)
+    printf("Processed Touch Event x: %.2f y %.2f\n", touchEvent.x, touchEvent.y);
+}
+
+void KeyboardRenderer::teardown() {
+    bgfx::destroy(indexBufferHandle);
+    bgfx::destroy(vertexBufferHandle);
+    bgfx::destroy(program);
+
+    bgfx::shutdown();
 }

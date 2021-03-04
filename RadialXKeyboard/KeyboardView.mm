@@ -6,7 +6,6 @@
 //
 
 #import "KeyboardView.h"
-#import <bgfx/platform.h>
 #import <Metal/Metal.h>
 
 #pragma mark static references
@@ -16,6 +15,8 @@ static id <MTLDevice> metalDevice = NULL;
 #pragma mark BGFXView implementation
 
 @implementation KeyboardView
+
+#pragma mark KeyboardView overrides
 
 + (Class)layerClass {
     Class metalClass = NSClassFromString(@"CAMetalLayer");    //is metal runtime sdk available
@@ -39,6 +40,8 @@ static id <MTLDevice> metalDevice = NULL;
         return nil;
     }
 
+    eventsQueue = new ThreadSafeQueue<CGPoint>();
+
     NSBundle *main = [NSBundle mainBundle];
     NSString *resourcePath = [main resourcePath];
     RendererArgs rendererArgs;
@@ -47,6 +50,7 @@ static id <MTLDevice> metalDevice = NULL;
     rendererArgs.device = metalDevice;
     rendererArgs.width = static_cast<uint32_t>(rect.size.width);
     rendererArgs.height = static_cast<uint32_t>(rect.size.height);
+    rendererArgs.eventsQueue = eventsQueue;
 
     keyboardRenderer = new KeyboardRenderer(rendererArgs);
     keyboardRenderer->init();
@@ -54,10 +58,39 @@ static id <MTLDevice> metalDevice = NULL;
     return self;
 }
 
+#pragma mark touch events
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self handleTouchEvent: touches withEvent: event];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self handleTouchEvent: touches withEvent: event];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self handleTouchEvent: touches withEvent: event];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self handleTouchEvent: touches withEvent: event];
+}
+
+- (void)handleTouchEvent:(NSSet *)touches withEvent:(UIEvent *)event {
+    BX_UNUSED(touches);
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint touchLocation = [touch locationInView:self];
+    touchLocation.x *= self.contentScaleFactor;
+    touchLocation.y *= self.contentScaleFactor;
+
+    eventsQueue->enqueue(touchLocation);
+}
+
+#pragma mark KeyboardView methods
+
 - (void)renderFrame {
     // This renders in the view (if it's not rendering the whole view will be green)
     keyboardRenderer->update();
-    // bgfx::renderFrame();
 }
 
 - (void)start {
@@ -69,6 +102,7 @@ static id <MTLDevice> metalDevice = NULL;
 
 - (void)stop {
     if (nil != displayLink) {
+        keyboardRenderer->teardown();
         [displayLink invalidate];
         displayLink = nil;
     }

@@ -13,6 +13,8 @@ private:
     bgfx::VertexBufferHandle vertexBufferHandle;
     bgfx::IndexBufferHandle indexBufferHandle;
     bgfx::ProgramHandle program;
+
+    void processEvents();
 public:
     KeyboardRenderer(const RendererArgs& args);
 

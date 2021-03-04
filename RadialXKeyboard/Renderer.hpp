@@ -6,6 +6,8 @@
 #define TECLAT_RENDERER_HPP
 
 #include <bx/uint32_t.h>
+#include <CoreGraphics/CGGeometry.h>
+#include "ThreadSafeQueue.cpp"
 
 struct RendererArgs {
     void *layer;
@@ -13,6 +15,7 @@ struct RendererArgs {
     const char *resourcePath;
     uint32_t width;
     uint32_t height;
+    ThreadSafeQueue<CGPoint>* eventsQueue;
 };
 
 class Renderer {
@@ -43,6 +46,10 @@ public:
 
     uint32_t height() {
         return _args.height;
+    }
+
+    ThreadSafeQueue<CGPoint>* queue() {
+        return _args.eventsQueue;
     }
 
     const char* resourcePath() {

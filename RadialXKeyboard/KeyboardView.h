@@ -7,15 +7,18 @@
 
 #import <UIKit/UIKit.h>
 #import "KeyboardRenderer.hpp"
+#import "ThreadSafeQueue.cpp"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KeyboardView : UIView {
-    KeyboardRenderer* keyboardRenderer;
-    CADisplayLink* displayLink;
+    KeyboardRenderer *keyboardRenderer;
+    CADisplayLink *displayLink;
+    ThreadSafeQueue<CGPoint> *eventsQueue;
 }
-- (void) start;
-- (void) stop;
+- (void)start;
+
+- (void)stop;
 
 @end
 

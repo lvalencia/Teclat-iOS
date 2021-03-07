@@ -8,6 +8,8 @@
 #import "KeyboardViewController.h"
 #import "KeyboardView.h"
 
+#define DEBUG NO
+
 @interface KeyboardViewController ()
 @property(nonatomic, strong) UIButton *nextKeyboardButton;
 @property(nonatomic, strong) KeyboardView *keyboardView;
@@ -27,15 +29,19 @@
     // Hack with a nil check
     if (nil == self.keyboardView){
         CGRect rect = [self.view frame];
-        self.keyboardView = [[KeyboardView alloc] initWithFrame:rect];
-        float scaleFactor = [self.view contentScaleFactor];
+
+        self.keyboardView = [[KeyboardView alloc] initWithFrame:rect andDocumentProxy: self.textDocumentProxy];
+        float scaleFactor = (float) [self.view contentScaleFactor];
         [self.keyboardView setContentScaleFactor:scaleFactor];
 
         // Visual Testing our BGFX View is Green
-        [self.keyboardView setBackgroundColor:[UIColor colorWithRed:0
-                                                              green:1
-                                                               blue:0
-                                                              alpha:1]];
+        if (DEBUG) {
+            [self.keyboardView setBackgroundColor:[UIColor colorWithRed:0
+                                                                  green:1
+                                                                   blue:0
+                                                                  alpha:1]];
+        }
+
         [self.view addSubview:self.keyboardView];
         [self.keyboardView start];
     }

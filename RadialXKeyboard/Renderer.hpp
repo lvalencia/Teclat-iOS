@@ -28,7 +28,7 @@ public:
 
     virtual void init() = 0;
 
-    virtual void update() = 0;
+    virtual void update(void* inputHandler) = 0;
 
     virtual void teardown() = 0;
 

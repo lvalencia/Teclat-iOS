@@ -6,6 +6,7 @@
 //
 
 #import "KeyboardView.h"
+#import "InputHandler.h"
 #import <Metal/Metal.h>
 
 #pragma mark static references
@@ -33,13 +34,14 @@ static id <MTLDevice> metalDevice = NULL;
     return nil; // Should never get here
 }
 
-- (id)initWithFrame:(CGRect)rect {
+- (id)initWithFrame:(CGRect)rect andDocumentProxy:(id <UITextDocumentProxy>)proxy {
     self = [super initWithFrame:rect];
 
     if (nil == self) {
         return nil;
     }
 
+    inputHandler = [[InputHandler alloc] initWithTextDocumentProxy:proxy];
     eventsQueue = new ThreadSafeQueue<CGPoint>();
 
     NSBundle *main = [NSBundle mainBundle];
@@ -61,19 +63,19 @@ static id <MTLDevice> metalDevice = NULL;
 #pragma mark touch events
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self handleTouchEvent: touches withEvent: event];
+    [self handleTouchEvent:touches withEvent:event];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self handleTouchEvent: touches withEvent: event];
+    [self handleTouchEvent:touches withEvent:event];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self handleTouchEvent: touches withEvent: event];
+    [self handleTouchEvent:touches withEvent:event];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self handleTouchEvent: touches withEvent: event];
+    [self handleTouchEvent:touches withEvent:event];
 }
 
 - (void)handleTouchEvent:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -90,7 +92,7 @@ static id <MTLDevice> metalDevice = NULL;
 
 - (void)renderFrame {
     // This renders in the view (if it's not rendering the whole view will be green)
-    keyboardRenderer->update();
+    keyboardRenderer->update(inputHandler);
 }
 
 - (void)start {

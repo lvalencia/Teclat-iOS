@@ -7,7 +7,9 @@
 #include <bgfx/platform.h>
 #include <bx/math.h>
 #include <cstdio>
+#include <sstream>
 #include "ShaderLoader.hpp"
+#include "InputHandler.hpp"
 
 #pragma mark cube mesh
 struct PositionalColorVertex {
@@ -105,8 +107,8 @@ void KeyboardRenderer::init() {
 
 unsigned int counter = 0;
 
-void KeyboardRenderer::update() {
-    this->processEvents();
+void KeyboardRenderer::update(void* inputHandler) {
+    this->processEvents(inputHandler);
 
     uint32_t width = this->width();
     uint32_t height = this->height();
@@ -147,7 +149,7 @@ void KeyboardRenderer::update() {
     counter++;
 }
 
-void KeyboardRenderer::processEvents() {
+void KeyboardRenderer::processEvents(void* inputHandler) {
     if (this->queue()->isEmpty()) {
         return;
     }
@@ -157,7 +159,15 @@ void KeyboardRenderer::processEvents() {
 
     // @TODO - Forward RayCasting (was something touched, if so what) result to
     //         iOS land textDocumentProxy(Handler? or some sort of Handler and write to doc)
-    printf("Processed Touch Event x: %.2f y %.2f\n", touchEvent.x, touchEvent.y);
+    std::ostringstream stringStream;
+    stringStream << "Processed Touch Event x: ";
+    stringStream << touchEvent.x;
+    stringStream << " y: ";
+    stringStream << touchEvent.y;
+    stringStream << ". ";
+    // printf("Processed Touch Event x: %.2f y %.2f\n", touchEvent.x, touchEvent.y);
+
+    insertText(inputHandler, stringStream.str());
 }
 
 void KeyboardRenderer::teardown() {

@@ -14,13 +14,14 @@ private:
     bgfx::IndexBufferHandle indexBufferHandle;
     bgfx::ProgramHandle program;
 
-    void processEvents();
+    void processEvents(void* inputHandler);
 public:
     KeyboardRenderer(const RendererArgs& args);
 
     void init() override;
 
-    void update() override;
+    // passing this in like this is a hack <-- should probably be a "renderer" arg
+    void update(void* inputHandler) override;
 
     void teardown() override;
 

@@ -31,8 +31,24 @@
 		7E39766F25ECA0920089AF21 /* vs_cubes.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7E39709525ECA08E0089AF21 /* vs_cubes.bin */; };
 		7E3C516525F0B141001D1E68 /* ThreadSafeQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C516325F0B141001D1E68 /* ThreadSafeQueue.cpp */; };
 		7E5F52BE25FB3458000B9847 /* fs_picking.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F52BD25FB3458000B9847 /* fs_picking.bin */; };
+		7E5F52D625FF35E0000B9847 /* mechanical_keyboard.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F52D525FF35E0000B9847 /* mechanical_keyboard.bin */; };
+		7E5F531326032ACA000B9847 /* vertexfilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530326032ACA000B9847 /* vertexfilter.cpp */; };
+		7E5F531426032ACA000B9847 /* vertexcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530426032ACA000B9847 /* vertexcodec.cpp */; };
+		7E5F531526032ACA000B9847 /* overdrawanalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530526032ACA000B9847 /* overdrawanalyzer.cpp */; };
+		7E5F531626032ACA000B9847 /* vcacheoptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530626032ACA000B9847 /* vcacheoptimizer.cpp */; };
+		7E5F531726032ACA000B9847 /* overdrawoptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530726032ACA000B9847 /* overdrawoptimizer.cpp */; };
+		7E5F531826032ACA000B9847 /* stripifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530926032ACA000B9847 /* stripifier.cpp */; };
+		7E5F531926032ACA000B9847 /* vcacheanalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530A26032ACA000B9847 /* vcacheanalyzer.cpp */; };
+		7E5F531A26032ACA000B9847 /* indexcodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530B26032ACA000B9847 /* indexcodec.cpp */; };
+		7E5F531B26032ACA000B9847 /* vfetchoptimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530C26032ACA000B9847 /* vfetchoptimizer.cpp */; };
+		7E5F531C26032ACA000B9847 /* allocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530D26032ACA000B9847 /* allocator.cpp */; };
+		7E5F531D26032ACA000B9847 /* spatialorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530E26032ACA000B9847 /* spatialorder.cpp */; };
+		7E5F531E26032ACA000B9847 /* indexgenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F530F26032ACA000B9847 /* indexgenerator.cpp */; };
+		7E5F531F26032ACA000B9847 /* vfetchanalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F531026032ACA000B9847 /* vfetchanalyzer.cpp */; };
+		7E5F532026032ACA000B9847 /* clusterizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F531126032ACA000B9847 /* clusterizer.cpp */; };
+		7E5F532126032ACA000B9847 /* simplifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F531226032ACA000B9847 /* simplifier.cpp */; };
 		C36A01349061059A7FD13A24 /* InputHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = C36A0B9604020C5770E2DBC8 /* InputHandler.mm */; };
-		C36A041B9EEC45F9F5996868 /* ShaderLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36A0322E85DE553E2BFCBC4 /* ShaderLoader.cpp */; };
+		C36A041B9EEC45F9F5996868 /* Loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36A0322E85DE553E2BFCBC4 /* Loader.cpp */; };
 		C36A07A907DFF3B75A1B2EC7 /* KeyboardRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */; };
 /* End PBXBuildFile section */
 
@@ -174,12 +190,29 @@
 		7E39709525ECA08E0089AF21 /* vs_cubes.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = vs_cubes.bin; sourceTree = "<group>"; };
 		7E3C516325F0B141001D1E68 /* ThreadSafeQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ThreadSafeQueue.cpp; sourceTree = "<group>"; };
 		7E5F52BD25FB3458000B9847 /* fs_picking.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = fs_picking.bin; sourceTree = "<group>"; };
-		C36A0322E85DE553E2BFCBC4 /* ShaderLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderLoader.cpp; sourceTree = "<group>"; };
+		7E5F52D525FF35E0000B9847 /* mechanical_keyboard.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = mechanical_keyboard.bin; sourceTree = "<group>"; };
+		7E5F530326032ACA000B9847 /* vertexfilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertexfilter.cpp; sourceTree = "<group>"; };
+		7E5F530426032ACA000B9847 /* vertexcodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vertexcodec.cpp; sourceTree = "<group>"; };
+		7E5F530526032ACA000B9847 /* overdrawanalyzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = overdrawanalyzer.cpp; sourceTree = "<group>"; };
+		7E5F530626032ACA000B9847 /* vcacheoptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vcacheoptimizer.cpp; sourceTree = "<group>"; };
+		7E5F530726032ACA000B9847 /* overdrawoptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = overdrawoptimizer.cpp; sourceTree = "<group>"; };
+		7E5F530826032ACA000B9847 /* meshoptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meshoptimizer.h; sourceTree = "<group>"; };
+		7E5F530926032ACA000B9847 /* stripifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stripifier.cpp; sourceTree = "<group>"; };
+		7E5F530A26032ACA000B9847 /* vcacheanalyzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vcacheanalyzer.cpp; sourceTree = "<group>"; };
+		7E5F530B26032ACA000B9847 /* indexcodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = indexcodec.cpp; sourceTree = "<group>"; };
+		7E5F530C26032ACA000B9847 /* vfetchoptimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vfetchoptimizer.cpp; sourceTree = "<group>"; };
+		7E5F530D26032ACA000B9847 /* allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = allocator.cpp; sourceTree = "<group>"; };
+		7E5F530E26032ACA000B9847 /* spatialorder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spatialorder.cpp; sourceTree = "<group>"; };
+		7E5F530F26032ACA000B9847 /* indexgenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = indexgenerator.cpp; sourceTree = "<group>"; };
+		7E5F531026032ACA000B9847 /* vfetchanalyzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vfetchanalyzer.cpp; sourceTree = "<group>"; };
+		7E5F531126032ACA000B9847 /* clusterizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = clusterizer.cpp; sourceTree = "<group>"; };
+		7E5F531226032ACA000B9847 /* simplifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplifier.cpp; sourceTree = "<group>"; };
+		C36A0322E85DE553E2BFCBC4 /* Loader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Loader.cpp; sourceTree = "<group>"; };
 		C36A063DA13BED36AC927863 /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
 		C36A0745381BE7252D056A82 /* KeyboardRenderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KeyboardRenderer.hpp; sourceTree = "<group>"; };
 		C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardRenderer.cpp; sourceTree = "<group>"; };
 		C36A0B9604020C5770E2DBC8 /* InputHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = InputHandler.mm; sourceTree = "<group>"; };
-		C36A0C84F159F7EC111C25EC /* ShaderLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShaderLoader.hpp; sourceTree = "<group>"; };
+		C36A0C84F159F7EC111C25EC /* Loader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Loader.hpp; sourceTree = "<group>"; };
 		C36A0EE499E6370D979C8233 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		C36A0FA46F1BE00903575291 /* InputHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InputHandler.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -298,6 +331,8 @@
 		7E06661D25E23E4000A10151 /* RadialXKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				7E5F530026032A71000B9847 /* vendor */,
+				7E5F52FA2603246E000B9847 /* meshes */,
 				7E396EB325ECA08C0089AF21 /* shaders */,
 				7E06661E25E23E4000A10151 /* KeyboardViewController.h */,
 				7E06661F25E23E4000A10151 /* KeyboardViewController.mm */,
@@ -307,8 +342,8 @@
 				C36A07E4BC4766C3BAF999D7 /* KeyboardRenderer.cpp */,
 				C36A0745381BE7252D056A82 /* KeyboardRenderer.hpp */,
 				C36A063DA13BED36AC927863 /* Renderer.hpp */,
-				C36A0322E85DE553E2BFCBC4 /* ShaderLoader.cpp */,
-				C36A0C84F159F7EC111C25EC /* ShaderLoader.hpp */,
+				C36A0322E85DE553E2BFCBC4 /* Loader.cpp */,
+				C36A0C84F159F7EC111C25EC /* Loader.hpp */,
 				7E3C516325F0B141001D1E68 /* ThreadSafeQueue.cpp */,
 				C36A0B9604020C5770E2DBC8 /* InputHandler.mm */,
 				C36A0EE499E6370D979C8233 /* InputHandler.h */,
@@ -376,6 +411,54 @@
 				7E5F52BD25FB3458000B9847 /* fs_picking.bin */,
 			);
 			path = metal;
+			sourceTree = "<group>";
+		};
+		7E5F52FA2603246E000B9847 /* meshes */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F52D525FF35E0000B9847 /* mechanical_keyboard.bin */,
+			);
+			path = meshes;
+			sourceTree = "<group>";
+		};
+		7E5F530026032A71000B9847 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F530126032A7A000B9847 /* meshoptimizer */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		7E5F530126032A7A000B9847 /* meshoptimizer */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F530226032ACA000B9847 /* src */,
+			);
+			path = meshoptimizer;
+			sourceTree = "<group>";
+		};
+		7E5F530226032ACA000B9847 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F530326032ACA000B9847 /* vertexfilter.cpp */,
+				7E5F530426032ACA000B9847 /* vertexcodec.cpp */,
+				7E5F530526032ACA000B9847 /* overdrawanalyzer.cpp */,
+				7E5F530626032ACA000B9847 /* vcacheoptimizer.cpp */,
+				7E5F530726032ACA000B9847 /* overdrawoptimizer.cpp */,
+				7E5F530826032ACA000B9847 /* meshoptimizer.h */,
+				7E5F530926032ACA000B9847 /* stripifier.cpp */,
+				7E5F530A26032ACA000B9847 /* vcacheanalyzer.cpp */,
+				7E5F530B26032ACA000B9847 /* indexcodec.cpp */,
+				7E5F530C26032ACA000B9847 /* vfetchoptimizer.cpp */,
+				7E5F530D26032ACA000B9847 /* allocator.cpp */,
+				7E5F530E26032ACA000B9847 /* spatialorder.cpp */,
+				7E5F530F26032ACA000B9847 /* indexgenerator.cpp */,
+				7E5F531026032ACA000B9847 /* vfetchanalyzer.cpp */,
+				7E5F531126032ACA000B9847 /* clusterizer.cpp */,
+				7E5F531226032ACA000B9847 /* simplifier.cpp */,
+			);
+			name = src;
+			path = ../../../../libs/meshoptimizer/src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +666,7 @@
 			files = (
 				7E39766F25ECA0920089AF21 /* vs_cubes.bin in Resources */,
 				7E5F52BE25FB3458000B9847 /* fs_picking.bin in Resources */,
+				7E5F52D625FF35E0000B9847 /* mechanical_keyboard.bin in Resources */,
 				7E39758225ECA0910089AF21 /* fs_cubes.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,12 +705,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5F532026032ACA000B9847 /* clusterizer.cpp in Sources */,
+				7E5F531826032ACA000B9847 /* stripifier.cpp in Sources */,
+				7E5F532126032ACA000B9847 /* simplifier.cpp in Sources */,
+				7E5F531A26032ACA000B9847 /* indexcodec.cpp in Sources */,
+				7E5F531726032ACA000B9847 /* overdrawoptimizer.cpp in Sources */,
 				7E06662025E23E4000A10151 /* KeyboardViewController.mm in Sources */,
 				7E3C516525F0B141001D1E68 /* ThreadSafeQueue.cpp in Sources */,
+				7E5F531D26032ACA000B9847 /* spatialorder.cpp in Sources */,
+				7E5F531E26032ACA000B9847 /* indexgenerator.cpp in Sources */,
 				7E0BD81D25E770E6002F75B5 /* KeyboardView.mm in Sources */,
+				7E5F531926032ACA000B9847 /* vcacheanalyzer.cpp in Sources */,
+				7E5F531326032ACA000B9847 /* vertexfilter.cpp in Sources */,
+				7E5F531426032ACA000B9847 /* vertexcodec.cpp in Sources */,
+				7E5F531F26032ACA000B9847 /* vfetchanalyzer.cpp in Sources */,
+				7E5F531526032ACA000B9847 /* overdrawanalyzer.cpp in Sources */,
 				C36A07A907DFF3B75A1B2EC7 /* KeyboardRenderer.cpp in Sources */,
-				C36A041B9EEC45F9F5996868 /* ShaderLoader.cpp in Sources */,
+				C36A041B9EEC45F9F5996868 /* Loader.cpp in Sources */,
 				C36A01349061059A7FD13A24 /* InputHandler.mm in Sources */,
+				7E5F531B26032ACA000B9847 /* vfetchoptimizer.cpp in Sources */,
+				7E5F531626032ACA000B9847 /* vcacheoptimizer.cpp in Sources */,
+				7E5F531C26032ACA000B9847 /* allocator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +1039,14 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BS65FY9RR;
+				HEADER_SEARCH_PATHS = (
+					../libs/bx/include/compat/ios/,
+					../libs/bx/include/,
+					../libs/bimg/include/,
+					../libs/bgfx/include/,
+					../libs/bgfx/3rdparty/,
+					../libs/meshoptimizer,
+				);
 				INFOPLIST_FILE = RadialXKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -958,6 +1065,14 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BS65FY9RR;
+				HEADER_SEARCH_PATHS = (
+					../libs/bx/include/compat/ios/,
+					../libs/bx/include/,
+					../libs/bimg/include/,
+					../libs/bgfx/include/,
+					../libs/bgfx/3rdparty/,
+					../libs/meshoptimizer,
+				);
 				INFOPLIST_FILE = RadialXKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

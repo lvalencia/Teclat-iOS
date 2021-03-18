@@ -10,7 +10,7 @@
 #include <cstdio>
 #include <sstream>
 #include <bx/rng.h>
-#include "ShaderLoader.hpp"
+#include "Loader.hpp"
 #include "InputHandler.hpp"
 
 #define RENDER_PASS_SHADING 0  // Default forward rendered geo with simple shading
@@ -117,15 +117,18 @@ void KeyboardRenderer::init() {
     );
 
     const char *path = this->resourcePath();
-    bgfx::ShaderHandle vectorShader = ShaderLoader::loadShader(path, "/vs_cubes");
-    bgfx::ShaderHandle fragmentShader = ShaderLoader::loadShader(path, "/fs_cubes");
+    bgfx::ShaderHandle vectorShader = Loader::loadShader(path, "/vs_cubes");
+    bgfx::ShaderHandle fragmentShader = Loader::loadShader(path, "/fs_cubes");
     program = bgfx::createProgram(vectorShader, fragmentShader, true);
+
+    Mesh mesh = Loader::loadMesh(path, "/mechanical_keyboard");
+    // @TODO - Verify Mesh Loaded Correctly, and Render that instead of cube
 
     // Create Uniform(s)
     u_id = bgfx::createUniform("u_id", bgfx::UniformType::Vec4); // ID for drawing into ID buffer
 
-    bgfx::ShaderHandle pickingVectorShader = ShaderLoader::loadShader(path, "/vs_cubes");
-    bgfx::ShaderHandle pickingFragmentShader = ShaderLoader::loadShader(path, "/fs_picking");
+    bgfx::ShaderHandle pickingVectorShader = Loader::loadShader(path, "/vs_cubes");
+    bgfx::ShaderHandle pickingFragmentShader = Loader::loadShader(path, "/fs_picking");
     pickingProgram = bgfx::createProgram(pickingVectorShader, pickingFragmentShader, true);
 
     reading = 0;
